@@ -1,0 +1,4 @@
+hello-play-scala:
+  image: claydonkey/hello-play-scala:latest
+  ports:
+    - "80:9000"

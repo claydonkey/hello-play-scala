@@ -1,0 +1,39 @@
+{
+    "project": "hello-play-scala",
+    "services": [
+	{
+	    "id": "hello-play-scala",
+	    "apps": [
+		{
+		    "env": {},
+		    "domain": {
+			"uri": "hello-play-scala.sloppy.zone"
+		    },
+		    "mem": 512,
+		    "image": "claydonkey/hello-play-scala:latest",
+		    "instances": 1,
+		    "id": "slickapp",
+		    "health_checks": [],
+		    "volumes": [],			
+			"health_checks": [
+            {
+              "timeout_seconds": 10,
+              "interval_seconds": 10,
+              "max_consecutive_failures": 3,
+              "path": "/",
+              "type": "HTTP",
+              "grace_period_seconds": 3
+            }
+          ],
+		    "port_mappings": [
+			{
+			    "container_port": 9000
+			}
+		    ]
+		}
+	    ]	
+	}
+    ]
+}
+
+
