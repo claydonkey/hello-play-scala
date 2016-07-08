@@ -2,7 +2,7 @@
     "project": "hello-play-scala",
     "services": [
 	{
-	    "id": "hello-play-scala",
+	    "id": "hello-services",
 	    "apps": [
 		{
 		    "env": {},
@@ -12,7 +12,7 @@
 		    "mem": 512,
 		    "image": "claydonkey/hello-play-scala:latest",
 		    "instances": 1,
-		    "id": "slickapp",
+		    "id": "hello-play-scala",
 		    "health_checks": [],
 		    "volumes": [],			
 			"health_checks": [
